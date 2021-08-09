@@ -72,7 +72,7 @@ const getPlayerPanelElement = (playerIdx) => {
 const onRollDice = () => {
     if (gIsGamePlaying) {
         rollDiceHandler();
-    };
+    }
 };
 
 const rollDiceHandler = () => {
@@ -86,7 +86,7 @@ const rollDiceHandler = () => {
         rollSixHandler(roll);
     } else {
         switchPlayer(gActivePlayer);
-    };
+    }
 };
 
 const getRandomNum = () => {
@@ -104,7 +104,7 @@ const rollSixHandler = (roll) => {
         gLastRoll += roll;
     } else {
         gLastRoll = 0;
-    };
+    }
     punishForDoubleSix();
 };
 
@@ -112,14 +112,14 @@ const punishForDoubleSix = () => {
     if (gLastRoll === 12) {
         zeroPlayerScores(gActivePlayer);
         switchPlayer(gActivePlayer);
-    };
+    }
 };
 
 const onHoldScore = () => {
     if (gIsGamePlaying) {
         holdRoundScore();
         finishRoundHandler();
-    };
+    }
 };
 
 const holdRoundScore = () => {
